@@ -1,0 +1,9 @@
+package com.salessystemapi.sales_system_api.repositories;
+
+import com.salessystemapi.sales_system_api.entities.Order;
+import com.salessystemapi.sales_system_api.entities.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface OrderRepository extends JpaRepository<Order, Long> {
+
+}
