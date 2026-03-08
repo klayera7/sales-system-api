@@ -1,8 +1,10 @@
 package com.salessystemapi.sales_system_api.config;
 
+import com.salessystemapi.sales_system_api.entities.Category;
 import com.salessystemapi.sales_system_api.entities.Order;
 import com.salessystemapi.sales_system_api.entities.User;
 import com.salessystemapi.sales_system_api.entities.entities.enums.OrderStatus;
+import com.salessystemapi.sales_system_api.repositories.CategoryRepository;
 import com.salessystemapi.sales_system_api.repositories.OrderRepository;
 import com.salessystemapi.sales_system_api.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,8 +25,18 @@ public class TestConfig implements CommandLineRunner {
     @Autowired
     private OrderRepository orderRepository;
 
+    @Autowired
+    private CategoryRepository categoryRepository;
+
     @Override
     public void run(String... args) throws Exception {
+
+        Category cat1 = new Category(null, "Eletronics");
+        Category cat2 = new Category(null, "Books");
+        Category cat3 = new Category(null, "Computers");
+
+        categoryRepository.saveAll(Arrays.asList(cat1, cat2, cat3));
+
 
         User u1 = new User(null, "Alex", "alex@gmail.com",
                 "123456", "987412369");
