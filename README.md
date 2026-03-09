@@ -2,19 +2,6 @@
 
 Uma API RESTful completa para gerenciamento de um sistema de vendas desenvolvida com Spring Boot, projetada para gerenciar usuários, pedidos, produtos, categorias e pagamentos de forma eficiente e escalável.
 
-## 📋 Índice
-
-- [Sobre o Projeto](#sobre-o-projeto)
-- [Tecnologias Utilizadas](#tecnologias-utilizadas)
-- [Funcionalidades](#funcionalidades)
-- [Estrutura do Projeto](#estrutura-do-projeto)
-- [Como Executar](#como-executar)
-- [Endpoints da API](#endpoints-da-api)
-- [Banco de Dados](#banco-de-dados)
-- [Testes](#testes)
-- [Contribuição](#contribuição)
-- [Licença](#licença)
-
 ## 🎯 Sobre o Projeto
 
 A Sales System API é uma aplicação backend robusta que serve como base para plataformas de e-commerce. O sistema implementa as principais operações CRUD (Create, Read, Update, Delete) com tratamento de exceções personalizado, validações de integridade referencial e uma arquitetura bem estruturada seguindo as melhores práticas do Spring Boot.
@@ -177,7 +164,7 @@ src/main/java/com/salessystemapi/sales_system_api/
 
 A aplicação popula automaticamente o banco H2 com dados de teste:
 
-- **2 usuários** (Maria Brown, Alex Green)
+- **2 usuários** (Alex, Alane)
 - **3 categorias** (Electronics, Books, Computers)
 - **5 produtos** com preços variados
 - **3 pedidos** com diferentes status
@@ -198,9 +185,9 @@ A aplicação popula automaticamente o banco H2 com dados de teste:
    ```http
    POST /users
    {
-     "name": "João Silva",
-     "email": "joao@email.com",
-     "phone": "11999999999"
+     "name": "Alex",
+     "email": "alex@gmail.com",
+     "phone": "987412369"
    }
    ```
 
@@ -208,7 +195,7 @@ A aplicação popula automaticamente o banco H2 com dados de teste:
    ```http
    POST /categories
    {
-     "name": "Eletrônicos"
+     "name": "Electronics"
    }
    ```
 
@@ -216,10 +203,10 @@ A aplicação popula automaticamente o banco H2 com dados de teste:
    ```http
    POST /products
    {
-     "name": "Smartphone",
-     "description": "Celular moderno",
-     "price": 1999.99,
-     "imgUrl": "https://example.com/phone.jpg"
+     "name": "Smart TV",
+     "description": "Nulla eu imperdiet purus. Maecenas ante.",
+     "price": 2190.0,
+     "imgUrl": ""
    }
    ```
 
